@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mandiri News"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:textColor="#003D79"></TextView>
+
+    <RelativeLayout
+        android:id="@+id/layoutTerkini"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/beritaTerkini"
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:textStyle="bold"
+            android:textColor="#003D79"
+            android:text="Hot News"></TextView>
+        <ImageView
+            android:id="@+id/ivTerkini"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/beritaTerkini"
+            android:foregroundGravity="center"
+            tools:src="@drawable/ic_launcher_background">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/tvHeadlineTerkini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivTerkini"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Ini adalah berita terbaru yang sangat viral di dunia maya"
+            android:textColor="#003D79"></TextView>
+        <TextView
+            android:id="@+id/tvAuthorTerkini"
+            android:layout_width="240dp"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"
+            tools:text="CNN Indonesia"
+            android:layout_below="@id/tvHeadlineTerkini"
+            android:textColor="#003D79"
+            android:textSize="10sp">
+
+        </TextView>
+        <TextView
+            android:layout_marginEnd="10dp"
+            android:id="@+id/tvDateTerkini"
+            android:layout_width="240dp"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"
+            tools:text="21-21-2021"
+            android:gravity="end"
+            android:layout_below="@id/tvHeadlineTerkini"
+            android:textColor="#003D79"
+            android:textSize="10sp"
+            android:layout_toRightOf="@id/tvAuthorTerkini">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/news_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>
